@@ -14,7 +14,8 @@ func TestComponentCreation(t *testing.T) {
 	c := goics.NewComponent()
 	c.SetType("VCALENDAR")
 	c.AddProperty("CALSCAL", "GREGORIAN")
-	c.AddProperty("PRODID", "-//tmpo.io/src/goics")
+	k, v := goics.FormatPRODIDField("tmpo.io", "src", "goics")
+	c.AddProperty(k, v)
 
 	if c.Properties["CALSCAL"][0] != "GREGORIAN" {
 		t.Error("Error adding property")

@@ -136,6 +136,11 @@ func FormatDateTime(key string, val time.Time) (string, string) {
 	return key, val.UTC().Format("20060102T150405Z")
 }
 
+// FormatPRODIDField returns a formated PRODID field
+func FormatPRODIDField(company, version, language string) (string, string) {
+	return "PRODID", "-//" + company + "/" + version + "/" + language
+}
+
 // WriteStringField UID:asdfasdfаs@dfasdf.com
 func WriteStringField(key string, val string) string {
 	return strings.ToUpper(key) + ":" + quoteString(val) + CRLF
