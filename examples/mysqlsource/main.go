@@ -8,10 +8,10 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/NoureddinBakir/goics"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/gorilla/mux"
 	"github.com/jmoiron/sqlx"
-	"github.com/jordic/goics"
 )
 
 var (
