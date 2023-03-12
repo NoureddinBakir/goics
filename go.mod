@@ -1,4 +1,4 @@
-module github.com/NoureddinBakir/goics
+module github.com/jordic/goics
 
 go 1.14
 
