@@ -40,7 +40,7 @@ func TestComponentCreation(t *testing.T) {
 	enc := goics.NewICalEncode(w)
 	enc.Encode(ins)
 
-	want := "BEGIN:VCALENDAR\r\nCALSCAL:GREGORIAN\r\nPRODID:-//tmpo.io/src/goics\r\nBEGIN:VEVENT\r\nUID:testing1\r\nUID:testing2\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+	want := "BEGIN:VCALENDAR\r\nCALSCAL:GREGORIAN\r\nPRODID:-//tmpo.io//src//goics\r\nBEGIN:VEVENT\r\nUID:testing1\r\nUID:testing2\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
 	got := w.String()
 
 	if got != want {

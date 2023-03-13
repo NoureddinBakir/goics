@@ -138,7 +138,7 @@ func FormatDateTime(key string, val time.Time) (string, string) {
 
 // FormatPRODIDField returns a formated PRODID field
 func FormatPRODIDField(company, version, language string) (string, string) {
-	return "PRODID", "-//" + company + "/" + version + "/" + language
+	return "PRODID", "-//" + company + "//" + version + "//" + language
 }
 
 // WriteStringField UID:asdfasdfаs@dfasdf.com
@@ -148,8 +148,8 @@ func WriteStringField(key string, val string) string {
 
 func quoteString(s string) string {
 	s = strings.Replace(s, "\\", "\\\\", -1)
-	s = strings.Replace(s, ";", "\\;", -1)
-	s = strings.Replace(s, ",", "\\,", -1)
+	//s = strings.Replace(s, ";", "\\;", -1)
+	//s = strings.Replace(s, ",", "\\,", -1)
 	s = strings.Replace(s, "\n", "\\n", -1)
 
 	return s
